@@ -5,7 +5,8 @@ from django.db import models
 
 class AutoModel(models.Model):
     name = models.CharField(max_length=255)
-
+    author = models.CharField(max_length=50)
+    
     class Meta:
         ordering = ['name']
 
