@@ -1,0 +1,11 @@
+<h3>Форма добавления и редактирования моделей автомобилей</h3>
+    <table class="table">
+        <tr ng-repeat="(key, value) in selectedAutoModel" ng-if="key != 'id' && key != 'resource_uri'">
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+    </table>
+    
+    <hr>
+    <a ui-sref="auto_model.edit({auto_modelId:selectedAutoModel.id})">Редактировать {{ auto_model.name }}</a>
+    <a href="" ng-click="delete()">Удалить</a>

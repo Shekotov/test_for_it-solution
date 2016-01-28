@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from tastypie.authentication import SessionAuthentication
+from tastypie.authorization import Authorization
 from tastypie.resources import ModelResource
 from app.models import AutoModel
 
@@ -8,7 +9,8 @@ class AutoModelResource(ModelResource):
         queryset = AutoModel.objects.all()
         resource_name = 'auto_model'
         authentication = SessionAuthentication()
-        #list_allowed_methods = []
+        authorization = Authorization()
+        list_allowed_methods = ['get', 'post', 'put', 'delete']
         #detail_allowed_methods = []
 
 class UserResource(ModelResource):

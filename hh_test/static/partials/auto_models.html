@@ -6,10 +6,10 @@
 
     <ul class="nav nav-list">
         <li>
-            <a ui-sref="auto_model.view({car_modelId:car_model.id})"> <span class="glyphicon glyphicon-plus"></span> Добавить модель</a>
+            <a ui-sref="auto_model.add()"> <span class="glyphicon glyphicon-plus"></span> Добавить модель</a>
         </li>
         <li ng-repeat="auto_model in auto_models">
-            <a ui-sref="auto_model.view({car_modelId:car_model.id})">{{ auto_model.name }}</a>
+            <a ui-sref="auto_model.view({auto_modelId:auto_model.id})">{{ auto_model.name }}</a>
         </li>
     </ul>
 </div>
@@ -17,8 +17,7 @@
 <div class="col-lg-8">
     <div ui-view>
         <div class="jumbotron text-center">
-
-            <p><span class="glyphicon glyphicon-asterisk"></span> <i>Здесь надо сделать возможность добавлять новые марки автомобилей и редактировать их</i></p>
+            <p>Используя список слева, Вы можете добавить новый автомобиль или выбрать существующий автомобиль для просмотра, редактирования или удаления.</p>
         </div>
     </div>
 
