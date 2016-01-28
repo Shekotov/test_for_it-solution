@@ -18,3 +18,4 @@ class UserResource(ModelResource):
         authentication = SessionAuthentication()
         #list_allowed_methods = []
         #detail_allowed_methods = []
+        excludes = ['password']
